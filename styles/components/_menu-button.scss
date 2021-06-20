@@ -1,0 +1,80 @@
+$Bgcolor: rgb(26, 4, 4);
+$Linecolor: rgb(253, 223, 49);
+
+.menu {
+  display: block;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 300px;
+  height: 100%;
+  overflow-y: scroll;
+  background-color: $Bgcolor;
+  &_top {
+    width: 100%;
+    height: 2rem;
+    margin: 0.5rem;
+  }
+  &__main {
+    border-top: 0.1rem $Linecolor double;
+    padding-top: 1rem;
+  }
+  &_bottom {
+    a {
+      color: white;
+      &:active {
+        color: white;
+      }
+      &:visited {
+        color: white;
+      }
+    }
+    border-top: 0.1rem $Linecolor double;
+    color: white;
+    width: 300px;
+    height: 6rem;
+    padding-left: 1rem;
+    padding-top: 1rem;
+    .faa-horizontal.animated,
+    .faa-horizontal.animated-hover:hover,
+    .faa-parent.animated-hover:hover > .faa-horizontal {
+      padding-top: 10px;
+      -webkit-animation: horizontal 2s ease infinite;
+      animation: horizontal 2s ease infinite;
+    }
+  }
+}
+
+.menu_button {
+  background-color: unset;
+  border: none;
+  outline: none !important;
+  cursor: pointer;
+  margin: 10px;
+  & > span {
+    background-color: black;
+    width: 35px;
+    height: 4px;
+    display: block;
+    margin-bottom: 9px;
+    transition: transform 0.7s;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.open > span {
+  &:nth-child(1) {
+    transition-delay: 70ms;
+    transform: translateY(14px) rotate(135deg);
+  }
+  &:nth-child(2) {
+    transition-delay: 0s;
+    transform: translateX(-18px) scaleX(0);
+  }
+  &:nth-child(3) {
+    transition-delay: 140ms;
+    transform: translateY(-11px) rotate(-135deg);
+  }
+}

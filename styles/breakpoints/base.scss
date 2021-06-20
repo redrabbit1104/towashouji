@@ -4,8 +4,18 @@ body {
   margin: 0;
 }
 
+ol,
+ul,
+dl {
+  padding-left: 0;
+}
+
+li {
+  list-style: none;
+}
+
 .mobile_container {
-  overflow: hidden;
+  overflow: scroll;
 }
 
 .header {
@@ -23,8 +33,8 @@ body {
 
 .slide_container {
   position: relative;
-  background-color: rgb(108, 108, 196);
-  height: 100vh;
+  background-color: rgb(240, 240, 247);
+  height: 100%;
   z-index: 5;
   transition: transform 0.6s;
   &.slide {
@@ -34,7 +44,117 @@ body {
     background-color: white;
     height: 100px;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
   }
+}
+
+#links01 a {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  color: #000;
+}
+
+label {
+  display: block;
+  padding: 15px;
+  line-height: 1;
+  color: #fff;
+  background: rgb(201, 5, 201);
+  cursor: pointer;
+  a {
+    color: white;
+    &:active {
+      color: white;
+    }
+    &:visited {
+      color: white;
+    }
+  }
+}
+
+input {
+  display: none;
+}
+
+.title ul {
+  margin: 1px;
+  padding: 0;
+  background: #f4f4f4;
+  list-style: none;
+  li {
+    height: 0;
+    overflow: hidden;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+  }
+}
+
+#menu_bar01:checked ~ #links01 li {
+  height: 3rem;
+  opacity: 1;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 15rem;
+  background-image: url(/images/1.jpg);
+  background-size: cover;
+  &_text {
+    text-shadow: 2px 3px 2px #353434;
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 500;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.company_info {
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  font-size: 0.8rem;
+  &_title {
+    border-left: 2px solid red;
+    padding-left: 1rem;
+  }
+  &_descriptions {
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+    & > h2 {
+      border-bottom: 1px solid red;
+    }
+    & > span {
+      font-size: 1rem;
+      & > a {
+        color: black;
+      }
+      & > a:active {
+        color: black;
+      }
+      & > a:visited {
+        color: black;
+      }
+    }
+  }
+}
+
+footer {
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  font-size: 0.8rem;
+  & > span {
+    display: block;
+  }
+  background-color: black;
+  color: white;
 }
