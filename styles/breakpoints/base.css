@@ -70,23 +70,24 @@ li {
 
 label {
   display: block;
-  padding: 15px;
+  padding: 1.2rem;
   line-height: 1;
-  color: #fff;
-  background: #c905c9;
+  color: black;
+  background: -webkit-gradient(linear, left top, left bottom, from(#fceabb), color-stop(15%, #fccd4d), color-stop(55%, #f8b500), color-stop(72%, #f8b500), to(#fbdf93));
+  background: linear-gradient(to bottom, #fceabb 0%, #fccd4d 15%, #f8b500 55%, #f8b500 72%, #fbdf93 100%);
   cursor: pointer;
 }
 
 label a {
-  color: white;
+  color: black;
 }
 
 label a:active {
-  color: white;
+  color: black;
 }
 
 label a:visited {
-  color: white;
+  color: black;
 }
 
 input {
@@ -169,16 +170,37 @@ input {
   color: black;
 }
 
-footer {
+.contact {
   width: 100%;
-  height: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#fceabb), color-stop(15%, #fccd4d), color-stop(55%, #f8b500), color-stop(72%, #f8b500), to(#fbdf93));
+  background: linear-gradient(to bottom, #fceabb 0%, #fccd4d 15%, #f8b500 55%, #f8b500 72%, #fbdf93 100%);
+  height: 37rem;
   padding: 1rem;
-  font-size: 0.8rem;
-  background-color: black;
-  color: white;
+  font-size: 1rem;
 }
 
-footer > span {
-  display: block;
+.contact_photo {
+  height: 15rem;
+  background-image: url(/images/contact.jpg);
+  background-size: cover;
+}
+
+.address {
+  padding: 0.5rem;
+}
+
+.address div > a {
+  color: black;
+}
+
+footer {
+  position: absolute;
+  font-size: 0.75rem;
+  bottom: 0;
+  background-color: #050101;
+  text-align: center;
+  color: white;
+  width: 100vw;
+  padding: 0.2rem;
 }
 /*# sourceMappingURL=base.css.map */

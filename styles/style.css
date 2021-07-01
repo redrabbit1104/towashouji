@@ -127,9 +127,17 @@ li {
   color: #e6291b;
 }
 
+.sizeup_logo {
+  display: none;
+}
+
+.sizeup_menu {
+  display: none;
+}
+
 .slide_container {
   position: relative;
-  background-color: #f0f0f7;
+  background-color: white;
   height: 100%;
   z-index: 5;
   -webkit-transition: -webkit-transform 0.6s;
@@ -164,25 +172,34 @@ li {
   color: #000;
 }
 
+#links01 a:hover {
+  color: white;
+  background-color: black;
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s;
+  cursor: pointer;
+}
+
 label {
   display: block;
-  padding: 15px;
+  padding: 1.2rem;
   line-height: 1;
-  color: #fff;
-  background: #c905c9;
+  color: black;
+  background: -webkit-gradient(linear, left top, left bottom, from(#fceabb), color-stop(15%, #fccd4d), color-stop(55%, #f8b500), color-stop(72%, #f8b500), to(#fbdf93));
+  background: linear-gradient(to bottom, #fceabb 0%, #fccd4d 15%, #f8b500 55%, #f8b500 72%, #fbdf93 100%);
   cursor: pointer;
 }
 
 label a {
-  color: white;
+  color: black;
 }
 
 label a:active {
-  color: white;
+  color: black;
 }
 
 label a:visited {
-  color: white;
+  color: black;
 }
 
 input {
@@ -205,7 +222,6 @@ input {
 
 #menu_bar01:checked ~ #links01 li {
   height: 3rem;
-  opacity: 1;
 }
 
 .hero {
@@ -265,16 +281,166 @@ input {
   color: black;
 }
 
-footer {
-  width: 100%;
-  height: 100%;
-  padding: 1rem;
-  font-size: 0.8rem;
-  background-color: black;
-  color: white;
+.sizeup_logo_image {
+  display: none;
 }
 
-footer > span {
-  display: block;
+.contact {
+  width: 100%;
+  color: white;
+  background-color: #1a0404;
+  height: 37rem;
+  padding: 1rem;
+  font-size: 1rem;
+}
+
+.contact_photo {
+  height: 15rem;
+  background-image: url(/images/contact.jpg);
+  background-size: cover;
+}
+
+.address {
+  padding: 0.5rem;
+}
+
+.address div > a {
+  color: color;
+}
+
+footer {
+  position: absolute;
+  font-size: 0.75rem;
+  bottom: 0;
+  background-color: #050101;
+  text-align: center;
+  color: white;
+  width: 100vw;
+  padding: 0.2rem;
+}
+
+.map iframe {
+  width: 21.5rem;
+}
+
+.map img {
+  display: none;
+}
+
+@media (min-width: 600px) {
+  .menu_button {
+    display: none;
+  }
+  .logo {
+    display: none;
+  }
+  .sizeup_logo_image {
+    display: block;
+    margin: auto 0.8rem;
+    width: 3rem;
+    height: 3rem;
+    -o-object-fit: fill;
+       object-fit: fill;
+  }
+  header {
+    -webkit-box-pack: start !important;
+        -ms-flex-pack: start !important;
+            justify-content: flex-start !important;
+  }
+  .sizeup_logo {
+    display: block;
+    font-size: 1.8rem;
+    background-size: cover;
+    background-image: url("/images/text.jpg");
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  .sizeup_menu {
+    display: block;
+    margin-top: 0.3rem;
+  }
+  .sizeup_menu__main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 0;
+  }
+  .sizeup_menu__item {
+    font-size: 0.8rem;
+    font-weight: 600;
+    width: 30%;
+  }
+  .sizeup_menu__item label:hover {
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    color: white;
+    text-decoration: none;
+  }
+  .sizeup_menu__item label {
+    line-height: 1;
+    text-align: center;
+    margin-bottom: 0;
+    height: 3rem;
+    border-right: 0.1rem solid black;
+  }
+  .twoline_label {
+    line-height: 1;
+  }
+  .twoline_label > a {
+    display: block;
+    -webkit-transform: translateY(-0.5rem);
+            transform: translateY(-0.5rem);
+  }
+  .map {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .map iframe {
+    width: 30rem;
+  }
+  .map img {
+    display: block;
+    width: 24rem;
+  }
+  .address_info {
+    margin-top: 1rem;
+  }
+  .address_info div > a {
+    color: white;
+  }
+  #menu_bar02:checked ~ #links02 li {
+    height: 2rem;
+    opacity: 1;
+  }
+  .sizeup_menu__item #links02 {
+    width: 41.4rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+  }
+  .sizeup_menu__item #links02 a {
+    padding: 0.5rem;
+  }
+  .sizeup_menu__item #links02 li {
+    line-height: 2.5;
+    display: absolute;
+  }
+  .sizeup_menu__item #links02 li > a:hover {
+    -webkit-transition: all 0.6s;
+    transition: all 0.6s;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+  }
+  #links02 {
+    width: 15vw;
+  }
 }
 /*# sourceMappingURL=style.css.map */
