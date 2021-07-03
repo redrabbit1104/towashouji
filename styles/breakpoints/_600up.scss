@@ -57,11 +57,13 @@ header {
     border-right: 0.1rem solid black;
   }
 }
-.twoline_label {
-  line-height: 1;
-  & > a {
-    display: block;
+.twoline_label.target3 {
+  line-height: 1.1;
+  & > div {
+    display: inline-block;
+    vertical-align: top;
     transform: translateY(-0.5rem);
+    padding-bottom: 2rem;
   }
 }
 
@@ -85,33 +87,47 @@ header {
   }
 }
 
-#menu_bar02:checked ~ #links02 li {
-  height: 2rem;
-  opacity: 1;
-}
-
 .sizeup_menu__item {
-  #links02 {
-    width: 41.4rem;
-    display: flex;
-    position: relative;
-
-    a {
-      padding: 0.5rem;
-    }
-    li {
-      line-height: 2.5;
-      display: absolute;
-      & > a:hover {
-        transition: all 0.6s;
-        background-color: black;
-        color: white;
-        cursor: pointer;
+  &__lists {
+    position: absolute;
+    #links06,
+    #links07,
+    #links08,
+    #links09,
+    #links10 {
+      width: 41.4rem;
+      position: relative;
+      display: flex;
+      opacity: 0;
+      transition: all 300ms;
+      a {
+        padding: 0.5rem;
+      }
+      li {
+        line-height: 2.5;
+        height: 2rem;
+        display: absolute;
+        & > a:hover {
+          transition: all 0.6s;
+          background-color: black;
+          color: white;
+          cursor: pointer;
+        }
+        & > a:link {
+          color: white;
+        }
+        & > a {
+          color: black;
+          text-decoration: none;
+        }
       }
     }
+    #links06.open,
+    #links07.open,
+    #links08.open,
+    #links09.open,
+    #links10.open {
+      opacity: 1;
+    }
   }
-}
-
-#links02 {
-  width: 15vw;
 }
